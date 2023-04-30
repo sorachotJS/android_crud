@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootItem"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    android:background="@color/color_content_1">
+
+    <ImageView
+        android:id="@+id/imgMember"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_launcher_foreground"/>
+
+    <TextView
+        android:id="@+id/textMemberId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="1"
+        android:textSize="18sp"
+        android:textColor="@color/color_text"/>
+    <TextView
+        android:id="@+id/textMemberName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Name A"
+        android:textSize="20sp"
+        android:textColor="@color/color_text"/>
+
+    <TextView
+        android:id="@+id/textMemberPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="CCO"
+        android:textSize="18sp"
+        android:textColor="@color/color_text"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+
+</LinearLayout>
