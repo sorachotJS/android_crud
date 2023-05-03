@@ -1,18 +1,26 @@
 package Adapter;
 
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.androidcrud.Models.UserModel;
 import com.example.androidcrud.R;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
+
 public class MyRecycleAdapter extends RecyclerView.Adapter<MyRecycleAdapter.Holder>{
-    private String[] mDataSet;
-    public MyRecycleAdapter(String[] dataSet){
+//    private String[] mDataSet;
+    List<UserModel.Datum> mDataSet;
+    public MyRecycleAdapter(List<UserModel.Datum> dataSet){
         mDataSet = dataSet;
     }
 
@@ -32,7 +40,7 @@ public class MyRecycleAdapter extends RecyclerView.Adapter<MyRecycleAdapter.Hold
 
     @Override
     public int getItemCount() {
-        return mDataSet.length;
+        return mDataSet.size();
     }
 
     class Holder extends RecyclerView.ViewHolder{
@@ -48,9 +56,10 @@ public class MyRecycleAdapter extends RecyclerView.Adapter<MyRecycleAdapter.Hold
         }
 
         public void setItem(int position){
-            txtId.setText(mDataSet[position]);
-            txtName.setText("index = "+position);
-            txtposition.setText("CEO");
+            txtId.setText(mDataSet.get(position).first_name);
+            txtName.setText(mDataSet.get(position).last_name);
+            txtposition.setText(mDataSet.get(position).email);
+
         }
     }
 }
